@@ -56,3 +56,11 @@ function _company(name,technology,capacity){
 
 const newCompany = new _company("wipro","JS","2000");
 console.log(newCompany);
+
+// task 1 Hello, object
+const user ={};// created an empty object
+user.name = "John"; // provided a property name with value
+user.surName = "Smith"; // provided a property surName with value
+user.name = "Pete";
+delete user.name ;
+console.log(user)
