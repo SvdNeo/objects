@@ -130,3 +130,7 @@ place:"Uttar Kannada"
 
 }
 console.log(newCollege.collegeName.detailedName.society);
+
+//merging the objects
+const mergedObj = Object.assign({},social,newCollege);
+console.log(mergedObj)
