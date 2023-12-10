@@ -11,7 +11,7 @@ Car.start = function engine(){
     console.log("Start the engine")
 }
 console.log(Car);
-Object.freeze(Car);
+//Object.freeze(Car);
 Car.details = function(){ console.log(`The car is ${this.name} made in the year ${this.make} and sold at ${this.cost}`)}
 Car.start(); // adding methods
 Car.details();
@@ -108,3 +108,25 @@ let salaries = {
   
   //console.log(menu);
 
+  // creating an object by constructor which is a singleton object
+
+const social = new Object();
+social.id = "qwerty123";
+social.name = "user"
+social.isLoggedIn = "true";
+console.log(social);
+
+// defining object inside object
+
+const newCollege = {
+collegeName:{
+  detailedName:{
+    society:"KLS",
+    name:"VDIT"
+  }
+  
+},
+place:"Uttar Kannada"
+
+}
+console.log(newCollege.collegeName.detailedName.society);
