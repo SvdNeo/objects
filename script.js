@@ -132,5 +132,25 @@ place:"Uttar Kannada"
 console.log(newCollege.collegeName.detailedName.society);
 
 //merging the objects
-const mergedObj = Object.assign({},social,newCollege);
+//const mergedObj = Object.assign({},social,newCollege);
+// this can also be done in this manner i.e through spread operator
+const mergedObj = {...social,...newCollege}
 console.log(mergedObj)
+
+// normally data from database is restored in terms of array of objects
+
+const dataBase = [{
+  1:"a"
+},
+{
+  b2:"b",
+  email:"sd@gmail.com"
+},
+{
+  3:"c"
+}]
+
+console.log(dataBase[1].b2)
+console.log(Object.keys(Car));
+console.log(Object.values(Car));
+console.log(Car.hasOwnProperty("name"))
