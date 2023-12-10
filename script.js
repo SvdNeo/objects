@@ -3,18 +3,22 @@ const Car = {
     name:"Ford",
     make:"2010",
     cost:"500000",
-    details:()=>{ console.log(`The car is ${Car.name} made in the year ${Car.make} and sold at ${Car.cost}`)}
+   
 }
 Car.capacity = "4";// adding properties
 // console.log(Car);
 Car.start = function engine(){
     console.log("Start the engine")
 }
+console.log(Car);
+Object.freeze(Car);
+Car.details = function(){ console.log(`The car is ${this.name} made in the year ${this.make} and sold at ${this.cost}`)}
 Car.start(); // adding methods
 Car.details();
 
 
-console.log(Car);
+ console.log(Car);
+
 // const Car = {
 //     name: "Ford",
 //     make: "2010",
@@ -45,7 +49,7 @@ class company {
 }
 
 const newCompany1 = new company("Neoito","ReactJS","200");
-console.log(newCompany1);
+//console.log(newCompany1);
 
 // object by constructor method
 function _company(name,technology,capacity){
@@ -55,7 +59,7 @@ function _company(name,technology,capacity){
 }
 
 const newCompany = new _company("wipro","JS","2000");
-console.log(newCompany);
+//console.log(newCompany);
 
 // task 1 Hello, object
 const user ={};// created an empty object
@@ -63,7 +67,7 @@ user.name = "John"; // provided a property name with value
 user.surName = "Smith"; // provided a property surName with value
 user.name = "Pete";
 delete user.name ;
-console.log(user)
+//console.log(user)
 
 //Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
 function isEmpty(obj){
@@ -84,7 +88,7 @@ let salaries = {
   for(let key in salaries){
     sum += salaries[key]
   }
-  console.log(sum)
+  //console.log(sum)
 
   let menu = {
     width: 200,
@@ -102,5 +106,5 @@ let salaries = {
   
   multiplyNumeric(menu);
   
-  console.log(menu);
+  //console.log(menu);
 
