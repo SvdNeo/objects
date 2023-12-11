@@ -154,3 +154,10 @@ console.log(dataBase[1].b2)
 console.log(Object.keys(Car));// here we get the keys in form of array which can be manipulated by using array methods
 console.log(Object.values(Car)); // similarly values
 console.log(Car.hasOwnProperty("name"))
+
+// object reference
+const user1 = {name:"Sanjay"};
+const admin = user1;
+console.log(admin);
+admin.name = "Vinay";
+console.log(user1);
