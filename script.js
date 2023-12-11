@@ -243,3 +243,20 @@ let calculator = {
 };
 alert( calculator.sum() );
 alert( calculator.mul() );
+
+let ladder = {
+  step: 0,
+  up:function() {
+    this.step++;
+    return this
+  },
+  down:function() {
+    this.step--;
+    return this
+  },
+  showStep: function() { // shows the current step
+    alert( this.step );
+    return this
+  }
+};
+ladder.up().up().down().showStep().down().showStep();
