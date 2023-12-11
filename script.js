@@ -193,3 +193,28 @@ const geometrical = {
   } else {
     console.log("user2 is null");
   }
+
+// 
+function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+}
+
+let user3 = makeUser();
+
+//console.log( user.ref.name ); // undefined as here this refers to global object which seems to be undefined
+
+// it can be rewritten as 
+function makeUser2(){
+  return{
+    name:"John",
+    ref:function(){
+      return this
+    }
+  }
+}
+let user4 = makeUser2();
+
+console.log( user4.ref().name );// John here this refers to its outer object which refers to name : "John"
