@@ -220,43 +220,90 @@ let user4 = makeUser2();
 console.log( user4.ref().name );// John here this refers to its outer object which refers to name : "John"
 
 //calculator
-let calculator = {
-  read: function(){
+// let calculator = {
+//   read: function(){
     
-      this.a=+prompt("Enter first value");
-      this.b=+prompt("Enter second value")
+//       this.a=+prompt("Enter first value");
+//       this.b=+prompt("Enter second value")
 
   
     
-  },
-  sum:function(){
-     this.read()
+//   },
+//   sum:function(){
+//      this.read()
   
-    return this.a+this.b;
+//     return this.a+this.b;
     
-  },
-  mul:function(){
+//   },
+//   mul:function(){
     
-    return this.a*this.b
-  }
+//     return this.a*this.b
+//   }
 
-};
-alert( calculator.sum() );
-alert( calculator.mul() );
+// };
+// alert( calculator.sum() );
+// alert( calculator.mul() );
 
-let ladder = {
-  step: 0,
-  up:function() {
-    this.step++;
-    return this
-  },
-  down:function() {
-    this.step--;
-    return this
-  },
-  showStep: function() { // shows the current step
-    alert( this.step );
-    return this
+// let ladder = {
+//   step: 0,
+//   up:function() {
+//     this.step++;
+//     return this
+//   },
+//   down:function() {
+//     this.step--;
+//     return this
+//   },
+//   showStep: function() { // shows the current step
+//     alert( this.step );
+//     return this
+//   }
+// };
+// ladder.up().up().down().showStep().down().showStep();
+
+//methods in constructor
+class User5 {
+  constructor(name) {
+    this.name = name;
+
+    this.sayHi = function () {
+      console.log("My name is: " + this.name);
+    };
   }
-};
-ladder.up().up().down().showStep().down().showStep();
+}
+
+let john = new User5("John");
+
+john.sayHi(); // My name is: John
+
+//constructor object
+
+let obj = {}
+
+function A(name){
+return obj;
+}
+function B(name){
+  return obj;
+  }
+  console.log( new A() == new B() )
+
+  //calculator using constructor method
+  function Calculator1(read,sum,mul){
+    this.read=function(){
+this.a= +prompt("Enter the first number ");
+this.b= +prompt("Enter the second number ");
+    }
+    this.sum = function(){
+      return this.a+this.b
+    }
+    this.mul = function(){
+      return this.a*this.b
+    }
+  }
+  let calculator2 = new Calculator1();
+calculator2.read();
+
+alert( "Sum=" + calculator2.sum() );
+alert( "Mul=" + calculator2.mul() );
+  
