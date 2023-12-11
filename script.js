@@ -185,4 +185,11 @@ const geometrical = {
  cloned.sizes.height = "120";
  console.log(geometrical.sizes.height);// 100 so there is no change
 
- 
+ let user2 = {name:"Dsv"};
+ console.log(user2.name);
+  user2 = null;
+  if (user2 !== null) {
+    console.log(user2.name);
+  } else {
+    console.log("user2 is null");
+  }
