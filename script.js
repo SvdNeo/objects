@@ -161,3 +161,28 @@ const admin = user1;
 console.log(admin);
 admin.name = "Vinay";
 console.log(user1);
+
+let clone = {};
+for(let key in user1){
+  clone[key]= user1[key]
+}
+clone.name = "Lucky";
+console.log(user1)
+console.log(clone)
+
+
+//structured clone
+
+const geometrical = {
+  name:"Triangle",
+  sizes:{
+    height:"100",
+    base:"25"
+  }
+}
+ const cloned = structuredClone(geometrical);
+ console.log(geometrical.sizes === cloned.sizes)// false
+ cloned.sizes.height = "120";
+ console.log(geometrical.sizes.height);// 100 so there is no change
+
+ 
