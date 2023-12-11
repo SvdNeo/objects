@@ -218,3 +218,28 @@ function makeUser2(){
 let user4 = makeUser2();
 
 console.log( user4.ref().name );// John here this refers to its outer object which refers to name : "John"
+
+//calculator
+let calculator = {
+  read: function(){
+    
+      this.a=+prompt("Enter first value");
+      this.b=+prompt("Enter second value")
+
+  
+    
+  },
+  sum:function(){
+     this.read()
+  
+    return this.a+this.b;
+    
+  },
+  mul:function(){
+    
+    return this.a*this.b
+  }
+
+};
+alert( calculator.sum() );
+alert( calculator.mul() );
